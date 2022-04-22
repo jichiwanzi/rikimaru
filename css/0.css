@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+/*aside*/
+
+aside{
+	position:fixed;
+	left:50px;
+	top:30%;
+	z-index: 1000;
+}
+
+.box{
+	width: 10px;
+	height: 100px;
+	font-size:5em;
+	text-align:center;
+	background:#A387A8;
+	margin:10px;
+	border-radius: 5px;
+}
+
+.box:hover{
+	background:#FFFFFF;
+	cursor:pointer;
+}
+
+.ch_bg{
+	background:#fff;
+}
+
+/*section*/
+
+section, article{
+	position: relative;
+	width:100%;
+	height:100vh;
+}
+
+article{
+	overflow: hidden;
+}
+
+
+article:nth-child(1){
+	background: #C60 url("../images/1.jpg") no-repeat;
+	background-size: cover; 
+}
+
+article:nth-child(2){
+	background: #0C0 url("../images/2.jpg") no-repeat;
+	background-size: cover; 
+}
+
+article:nth-child(3){
+	background: #FC0 url("../images/3.jpg") no-repeat;
+	background-size: cover; 
+}
+
+h1{
+	font-size:10em;
+	color:#fff;
+}
+
+.cenalign{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.moved, .moved1, .moved2{
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+	text-align: center;
+}
+
+.moved h1, .moved1 h1, .moved2 h1{
+	font-size: 12em;
+	font-family: 'Amatic SC', cursive;
+	color:rgba(255,255,255,1.0);
+}
+
+.moved p, .moved1 p, .moved2 p{
+	color:#fff;
+	font-size: 2em;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 700;
+}
+
+.moved h1, .moved p, .moved1 h1, .moved1 p, .moved2 h1, .moved2 p{
+	transition: all 1s ease;
+}
+
+.moved.hid h1, .moved1.hid h1, .moved2.hid h1{
+	opacity:0;
+	transform: translate3d(0, 0, 400px) rotateY(-20deg);
+}
+
+.moved.hid p, .moved1.hid p, .moved2.hid p{
+	opacity: 0;
+	transform:translate3d(0, 0, 400px) rotateY(20deg);
+}
+
+
